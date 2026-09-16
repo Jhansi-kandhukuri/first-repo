@@ -5,20 +5,20 @@ body {
   display: grid;
   place-items: center;
   font-family: Arial, sans-serif;
-  background: #f4f7fb;
+  background: linear-gradient(135deg, #dbeafe, #f5d0fe, #cffafe);
   color: #172033;
 }
 .card {
   width: min(700px, 90%);
   padding: 48px;
-  background: white;
+  background: rgba(255, 255, 255, .94);
   border-radius: 18px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.08);
+  box-shadow: 0 18px 50px rgba(79, 70, 229, .18);
   text-align: center;
   animation: cardIn .7s ease-out;
 }
-.tag { font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-h1 { font-size: 2.4rem; margin: 12px 0; }
+.tag { color: #7c3aed; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+h1 { font-size: 2.4rem; margin: 12px 0; color: #1e1b4b; }
 p { line-height: 1.6; }
 .pipeline {
   margin-top: 32px;
@@ -30,13 +30,15 @@ p { line-height: 1.6; }
 }
 .pipeline span {
   padding: 10px 16px;
-  border: 1px solid #ccd5e0;
+  border: 2px solid #818cf8;
   border-radius: 10px;
   cursor: pointer;
+  color: #4338ca;
+  background: #eef2ff;
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
-.pipeline span:hover { transform: translateY(-4px); box-shadow: 0 7px 16px rgba(0,0,0,.12); }
-.pipeline span.active { background: #e9f3ff; transform: scale(1.08); }
+.pipeline span:hover { transform: translateY(-4px); box-shadow: 0 7px 16px rgba(79,70,229,.22); }
+.pipeline span.active { background: #c4b5fd; color: #312e81; transform: scale(1.08); }
 .actions { margin-top: 30px; display: flex; justify-content: center; gap: 14px; }
 .action-btn {
   border: 0;
@@ -45,13 +47,13 @@ p { line-height: 1.6; }
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  background: #172033;
   color: white;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.action-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0,0,0,.18); }
+.action-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(79,70,229,.3); }
 .action-btn.clicked { animation: buttonPulse .35s ease; }
-.feedback { min-height: 28px; margin-top: 20px; font-weight: bold; opacity: 0; }
+.feedback { min-height: 28px; margin-top: 20px; font-weight: bold; color: #0891b2; opacity: 0; }
 .feedback.show { animation: feedbackIn .5s ease forwards; }
 @keyframes cardIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes buttonPulse { 50% { transform: scale(.92); } }
